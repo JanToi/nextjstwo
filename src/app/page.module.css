@@ -227,3 +227,8 @@
     transform: rotate(0deg);
   }
 }
+
+.nappi {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: darkgreen;
+ }

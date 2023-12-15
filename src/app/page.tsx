@@ -1,21 +1,14 @@
-import styles from "./page.module.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navigationbar from "./components/navigation/navbar";
 
-async function getPrices() {
-  const res = await fetch("https://api.porssisahko.net/v1/latest-prices.json");
-  if(!res) {
-    throw new Error("No data");
-  }
-  return res.json();
-}
-
-
-export default async function Home() {
-  const prices = await getPrices();
+export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <h1>Home Page</h1>
+    <>
+      <div className="container mx-auto px-4">
+        <Navigationbar />
+        <h1>Sähköhinta</h1>
+        <div className="w-full h-screen bg-green-300"></div>
       </div>
-    </main>
-  )
+    </>
+  );
 }
